@@ -1,13 +1,13 @@
 package repository
 
-import Aluno
+import model.Aluno
 
 class AlunoRepository {
     private val alunos = mutableListOf<Aluno>()
 
     fun cadastrarAluno(aluno: Aluno) {
         alunos.add(aluno)
-        println("Aluno: ${aluno.nome} cadastrado com sucesso!")
+        println("model.Aluno: ${aluno.nome} cadastrado com sucesso!")
     }
 
     fun listarAlunos(): List<Aluno> {
@@ -23,10 +23,10 @@ class AlunoRepository {
     fun buscarAlunoNomeComMensagem(nome: String): Aluno? {
         val aluno = alunos.find { it.nome == nome }
         if (aluno != null) {
-            println("Aluno encontrado: ${aluno.nome}")
+            println("model.Aluno encontrado: ${aluno.nome}")
             return aluno
         } else {
-            println("Aluno não encontrado.")
+            println("model.Aluno não encontrado.")
             return null
         }
     }
@@ -40,7 +40,7 @@ class AlunoRepository {
 
         alunos.remove(alunoID);
 
-        println("Aluno: ${alunoID} removido com sucesso!")
+        println("model.Aluno: ${alunoID} removido com sucesso!")
         println(alunos);
     }
 
@@ -51,7 +51,7 @@ class AlunoRepository {
 
         //return alunos.replaceAll(id == alunoID);
 
-        //println("Aluno: ${aluno.nome} cadastrado com sucesso!")
+        //println("model.Aluno: ${aluno.nome} cadastrado com sucesso!")
     }
 
 }

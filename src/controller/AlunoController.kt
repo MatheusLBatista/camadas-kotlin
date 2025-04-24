@@ -1,6 +1,6 @@
 package controller
 
-import Aluno
+import model.Aluno
 import service.AlunoService
 
 /*
@@ -19,7 +19,7 @@ import service.AlunoService
     ) {
 
         // TODO validacao de dados primarios
-        val aluno = Aluno(
+        val aluno = model.Aluno(
             id = id,
             nome = nome,
             idade = idade,
@@ -29,7 +29,7 @@ import service.AlunoService
 
         alunoService.cadastrarAluno(aluno);
         //se fosse uma api teria um retorno para rota
-        println("Aluno inserido com sucesso!")
+        println("model.Aluno inserido com sucesso!")
     }
 
     fun listarAlunos(){
@@ -53,7 +53,7 @@ import service.AlunoService
             aluno().exibirDados()
         }
         else {
-            println("Aluno nao encontrado")
+            println("model.Aluno nao encontrado")
         }
     }
 
@@ -83,7 +83,7 @@ class AlunoController(
 
         alunoService.cadastrarAluno(aluno)
         // Se fosse uma API, teria um retorno para a rota
-        println("Aluno inserido com sucesso!")
+        println("model.Aluno inserido com sucesso!")
     }
 
     fun listarAlunos() {
@@ -101,10 +101,10 @@ class AlunoController(
         val aluno = alunoService.buscarAlunoNome(nome);
 
         if (aluno != null) {
-            println("Aluno encontrado: ")
+            println("model.Aluno encontrado: ")
             aluno.exibirDados()
         } else {
-            println("Aluno não encontrado")
+            println("model.Aluno não encontrado")
         }
     }
 
@@ -112,10 +112,10 @@ class AlunoController(
         val aluno = alunoService.buscarAlunoID(id);
 
         if (aluno!= null){
-            println("Aluno encontrado: ");
+            println("model.Aluno encontrado: ");
             aluno.exibirDados();
         } else {
-            println("Aluno não encontrado!")
+            println("model.Aluno não encontrado!")
         }
     }
 
@@ -123,10 +123,10 @@ class AlunoController(
         val aluno = alunoService.removerAlunoID(id);
 
         if (aluno!= null){
-            println("Aluno removido: ");
+            println("model.Aluno removido: ");
             //aluno.exibirDados();
         } else {
-            println("Aluno não encontrado!")
+            println("model.Aluno não encontrado!")
         }
     }
 
@@ -147,7 +147,7 @@ class AlunoController(
         )
 
         alunoService.alterarAluno(aluno);
-        println("Aluno alterado com sucesso!")
+        println("model.Aluno alterado com sucesso!")
     }
 }
 

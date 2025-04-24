@@ -1,3 +1,5 @@
+package model
+
 import java.util.UUID;
 
 class Aluno (val id: String, val nome: String, val idade: Int, val curso: String, val nota: Double) {

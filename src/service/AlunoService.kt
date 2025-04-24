@@ -1,6 +1,6 @@
 package service
 
-import Aluno
+import model.Aluno
 import repository.AlunoRepository
 
 class AlunoService(private val alunoRepository: AlunoRepository) {
