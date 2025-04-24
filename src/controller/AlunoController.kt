@@ -1,9 +1,14 @@
+package controller
+
+import Aluno
+import service.AlunoService
+
 /*
     controller deve receber serviços e não repositórios via injeção de dependência
  */
 
-/*class AlunoController (
-    private val alunoService: AlunoService
+/*class controller.AlunoController (
+    private val alunoService: service.AlunoService
 ) {
     fun cadastrarAluno(
         id: String,

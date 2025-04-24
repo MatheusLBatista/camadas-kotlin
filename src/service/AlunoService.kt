@@ -1,3 +1,8 @@
+package service
+
+import Aluno
+import repository.AlunoRepository
+
 class AlunoService(private val alunoRepository: AlunoRepository) {
 
     fun cadastrarAluno(aluno: Aluno): Aluno {

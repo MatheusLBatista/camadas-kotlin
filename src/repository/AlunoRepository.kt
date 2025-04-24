@@ -1,3 +1,7 @@
+package repository
+
+import Aluno
+
 class AlunoRepository {
     private val alunos = mutableListOf<Aluno>()
 
